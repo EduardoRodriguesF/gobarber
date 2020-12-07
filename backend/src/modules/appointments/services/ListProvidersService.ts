@@ -22,10 +22,6 @@ class ListProvidersService {
       except_user_id: user_id,
     });
 
-    if (!users) {
-      throw new AppError('User not found.');
-    }
-
     return users;
   }
 }

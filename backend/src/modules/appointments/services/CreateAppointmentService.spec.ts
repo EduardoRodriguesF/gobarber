@@ -18,35 +18,35 @@ describe('CreateAppointment', () => {
     });
 
     const appointment = await createAppointment.execute({
-      provider_id: '1234512',
-      user_id: '12341234',
+      provider_id: 'provider_id',
+      user_id: 'user_id',
       date: new Date(2020, 4, 10, 13)
     });
 
     expect(appointment).toHaveProperty('id');
-    expect(appointment.provider_id).toBe('1234512');
+    expect(appointment.provider_id).toBe('provider_id');
   });
 
-  it('should not be able to create two appointment on the same time', async () => {
+  it('should not be able to create two appointments on the same time', async () => {
     jest.spyOn(Date, 'now').mockImplementationOnce(() => {
-      return new Date(2020, 4, 10, 12).getTime();
+      return new Date(2020, 4, 10, 10).getTime();
     });
 
-    const appointmentDate = new Date(2020, 4, 10, 13);
+    const appointmentDate = new Date(2020, 4, 10, 12);
 
     await createAppointment.execute({
-      provider_id: '1234512',
-      user_id: '12341234',
-      date: appointmentDate
+      date: appointmentDate,
+      user_id: 'user-id',
+      provider_id: 'provider-id',
     });
 
     await expect(
       createAppointment.execute({
-        provider_id: '1234512',
-        user_id: '12341234',
-        date: appointmentDate
-      })
-    ).rejects.toBeInstanceOf(AppError)
+        date: appointmentDate,
+        user_id: 'user-id',
+        provider_id: 'provider-id',
+      }),
+    ).rejects.toBeInstanceOf(AppError);
   });
 
   it('should not be able to create an appointment on a past date', async () => {
@@ -56,8 +56,8 @@ describe('CreateAppointment', () => {
 
     await expect(
       createAppointment.execute({
-        provider_id: '1234512',
-        user_id: '12341234',
+        provider_id: 'provider_id',
+        user_id: 'user_id',
         date: new Date(2020, 4, 10, 11)
       })
     ).rejects.toBeInstanceOf(AppError);
@@ -70,8 +70,8 @@ describe('CreateAppointment', () => {
 
     await expect(
       createAppointment.execute({
-        provider_id: '1234512',
-        user_id: '1234512',
+        provider_id: 'user_id',
+        user_id: 'user_id',
         date: new Date(2020, 4, 10, 13)
       })
     ).rejects.toBeInstanceOf(AppError);
