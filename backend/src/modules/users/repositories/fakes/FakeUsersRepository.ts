@@ -1,4 +1,4 @@
-/* eslint-disable camelcase */
+
 import { uuid } from 'uuidv4';
 
 import IUsersRepository from '@modules/users/repositories/IUsersRepository';

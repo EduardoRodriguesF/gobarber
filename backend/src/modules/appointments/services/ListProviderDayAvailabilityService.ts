@@ -1,4 +1,4 @@
-/* eslint-disable camelcase */
+
 import { injectable, inject } from 'tsyringe';
 import { getHours, isAfter } from 'date-fns';
 
@@ -36,7 +36,7 @@ class ListProviderDayAvailabilityService {
     const eachHourArray = Array.from({ length: 10 }, (_, index) => index + hourStart);
 
     const currentDate = new Date(Date.now());
-    
+
     const availability = eachHourArray.map(hour => {
       const hasAppointmentInHour = appointments.find(appointment => getHours(appointment.date) === hour);
 

@@ -1,4 +1,4 @@
-/* eslint-disable camelcase */
+
 import { getRepository, Repository, Raw } from 'typeorm';
 
 import IAppointmentsRepository from '@modules/appointments/repositories/IAppointmentsRepository';

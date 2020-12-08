@@ -1,4 +1,4 @@
-/* eslint-disable camelcase */
+
 import { injectable, inject } from 'tsyringe';
 import { getDaysInMonth, getDate } from 'date-fns';
 

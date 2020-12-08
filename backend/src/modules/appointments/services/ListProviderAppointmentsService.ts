@@ -1,4 +1,4 @@
-/* eslint-disable camelcase */
+
 import { injectable, inject } from 'tsyringe';
 
 import Appointment from '../infra/typeorm/entities/Appointment';

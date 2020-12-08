@@ -39,7 +39,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-/* eslint-disable camelcase */
+
 var uuidv4_1 = require("uuidv4");
 var User_1 = __importDefault(require("../../infra/typeorm/entities/User"));
 var FakeUsersRepository = /** @class */ (function () {

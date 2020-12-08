@@ -1,4 +1,3 @@
-/* eslint-disable camelcase */
 import { getMongoRepository, MongoRepository } from 'typeorm';
 
 import INotificationsRepository from '@modules/notifications/repositories/INotificationsRepository';
