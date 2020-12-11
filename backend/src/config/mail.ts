@@ -5,8 +5,8 @@ interface IMailConfig {
     from: {
       email: string;
       name: string;
-    }
-  }
+    };
+  };
 }
 
 export default {
@@ -16,6 +16,6 @@ export default {
     from: {
       name: 'Eduardo da GoBarber',
       email: 'contato@edurodrigues.dev',
-    }
-  }
+    },
+  },
 } as IMailConfig;
