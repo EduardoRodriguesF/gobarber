@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { FiClock, FiPower } from 'react-icons/fi';
-import { Container, Header, HeaderContent, Profile, Content, Schedule, Calendar, NextAppointment } from './styles';
+import { Container, Header, HeaderContent, Profile, Content, Schedule, Calendar, NextAppointment, Section, Appointment } from './styles';
 
 import logoImg from '../../assets/logo.svg';
 import { useAuth } from '../../hooks/auth';
 
 const Dashboard: React.FC = () => {
+  const [selectedDate, setSelectedDate] = useState(new Date());
+
   const { signOut, user } = useAuth();
 
   return (
@@ -50,6 +52,41 @@ const Dashboard: React.FC = () => {
               </span>
             </div>
           </NextAppointment>
+
+          <Section>
+            <strong>Manhã</strong>
+            <Appointment>
+              <span>
+                <FiClock />
+                08:00
+              </span>
+              <div>
+              <img src="https://avatars2.githubusercontent.com/u/44787022?s=460&u=1d5b1d0b0e8f0126e1beb93f94f5e10d68dbb7aa&v=4" alt="Eduardo Rodrigues" />
+              </div>
+            </Appointment>
+            <Appointment>
+              <span>
+                <FiClock />
+                08:00
+              </span>
+              <div>
+              <img src="https://avatars2.githubusercontent.com/u/44787022?s=460&u=1d5b1d0b0e8f0126e1beb93f94f5e10d68dbb7aa&v=4" alt="Eduardo Rodrigues" />
+              </div>
+            </Appointment>
+          </Section>
+
+          <Section>
+            <strong>Tarde</strong>
+            <Appointment>
+              <span>
+                <FiClock />
+                08:00
+              </span>
+              <div>
+              <img src="https://avatars2.githubusercontent.com/u/44787022?s=460&u=1d5b1d0b0e8f0126e1beb93f94f5e10d68dbb7aa&v=4" alt="Eduardo Rodrigues" />
+              </div>
+            </Appointment>
+          </Section>
         </Schedule>
         <Calendar />
       </Content>
