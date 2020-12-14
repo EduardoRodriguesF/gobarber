@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
+import DayPicker, { DayModifiers } from 'react-day-picker';
+import 'react-day-picker/lib/style.css';
 
 import { FiClock, FiPower } from 'react-icons/fi';
 import { Container, Header, HeaderContent, Profile, Content, Schedule, Calendar, NextAppointment, Section, Appointment } from './styles';
@@ -10,6 +12,12 @@ const Dashboard: React.FC = () => {
   const [selectedDate, setSelectedDate] = useState(new Date());
 
   const { signOut, user } = useAuth();
+
+  const handleDateChange = useCallback((day: Date, modifiers: DayModifiers) => {
+    if (modifiers.available) {
+      setSelectedDate(day);
+    }
+  }, []);
 
   return (
     <Container>
@@ -61,7 +69,7 @@ const Dashboard: React.FC = () => {
                 08:00
               </span>
               <div>
-              <img src="https://avatars2.githubusercontent.com/u/44787022?s=460&u=1d5b1d0b0e8f0126e1beb93f94f5e10d68dbb7aa&v=4" alt="Eduardo Rodrigues" />
+                <img src="https://avatars2.githubusercontent.com/u/44787022?s=460&u=1d5b1d0b0e8f0126e1beb93f94f5e10d68dbb7aa&v=4" alt="Eduardo Rodrigues" />
               </div>
             </Appointment>
             <Appointment>
@@ -70,7 +78,7 @@ const Dashboard: React.FC = () => {
                 08:00
               </span>
               <div>
-              <img src="https://avatars2.githubusercontent.com/u/44787022?s=460&u=1d5b1d0b0e8f0126e1beb93f94f5e10d68dbb7aa&v=4" alt="Eduardo Rodrigues" />
+                <img src="https://avatars2.githubusercontent.com/u/44787022?s=460&u=1d5b1d0b0e8f0126e1beb93f94f5e10d68dbb7aa&v=4" alt="Eduardo Rodrigues" />
               </div>
             </Appointment>
           </Section>
@@ -83,12 +91,37 @@ const Dashboard: React.FC = () => {
                 08:00
               </span>
               <div>
-              <img src="https://avatars2.githubusercontent.com/u/44787022?s=460&u=1d5b1d0b0e8f0126e1beb93f94f5e10d68dbb7aa&v=4" alt="Eduardo Rodrigues" />
+                <img src="https://avatars2.githubusercontent.com/u/44787022?s=460&u=1d5b1d0b0e8f0126e1beb93f94f5e10d68dbb7aa&v=4" alt="Eduardo Rodrigues" />
               </div>
             </Appointment>
           </Section>
         </Schedule>
-        <Calendar />
+        <Calendar>
+          <DayPicker
+            weekdaysShort={['D', 'S', 'T', 'Q', 'Q', 'S', 'S']}
+            fromMonth={new Date()}
+            disabledDays={[{ daysOfWeek: [0, 6] }]}
+            modifiers={{
+              available: { daysOfWeek: [1, 2, 3, 4, 5] },
+            }}
+            selectedDays={selectedDate}
+            onDayClick={handleDateChange}
+            months={[
+              'Janeiro',
+              'Fevereiro',
+              'Março',
+              'Abril',
+              'Maio',
+              'Junho',
+              'Julho',
+              'Agosto',
+              'Setembro',
+              'Outubro',
+              'Novembro',
+              'Dezembro',
+            ]}
+          />
+        </Calendar>
       </Content>
     </Container>
   );
