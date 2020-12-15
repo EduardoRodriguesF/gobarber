@@ -1,4 +1,4 @@
-import { getRepository, Not, Repository } from 'typeorm';
+import { getRepository, Repository, Not } from 'typeorm';
 
 import IUsersRepository from '@modules/users/repositories/IUsersRepository';
 import ICreateUserDTO from '@modules/users/dtos/ICreateUserDTO';
@@ -46,11 +46,11 @@ class UsersRepository implements IUsersRepository {
   }
 
   public async create(userData: ICreateUserDTO): Promise<User> {
-    const user = this.ormRepository.create(userData);
+    const appointment = this.ormRepository.create(userData);
 
-    await this.ormRepository.save(user);
+    await this.ormRepository.save(appointment);
 
-    return user;
+    return appointment;
   }
 
   public async save(user: User): Promise<User> {

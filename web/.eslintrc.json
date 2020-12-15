@@ -25,6 +25,8 @@
       "react/jsx-props-no-spreading": "off",
       "react/prop-types": "off",
       "no-unused-vars": "off",
+      "arrow-body-style": "off",
+      "import/no-duplicates": "off",
       "object-curly-newline": "off",
       "react-hooks/rules-of-hooks": "error",
       "react-hooks/exhaustive-deps": "warn",
