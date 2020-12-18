@@ -88,10 +88,23 @@ export const Calendar = styled.View`
 
 `;
 
+export const CalendarHeader = styled.View`
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+`;
+
 export const Title = styled.Text`
   font-family: 'RobotoSlab-Medium';
   color: #f4ede8;
   font-size: 24px;
+  margin: 0 24px 24px;
+`;
+
+export const DateLabel = styled.Text`
+  font-family: 'RobotoSlab-Medium';
+  color: #999591;
+  font-size: 18px;
   margin: 0 24px 24px;
 `;
 
