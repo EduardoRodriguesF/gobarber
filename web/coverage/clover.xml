@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1608654527020" clover="3.2.0">
-  <project timestamp="1608654527020" name="All files">
-    <metrics statements="219" coveredstatements="32" conditionals="55" coveredconditionals="6" methods="62" coveredmethods="6" elements="336" coveredelements="44" complexity="0" loc="219" ncloc="219" packages="12" files="13" classes="13"/>
+<coverage generated="1608658420206" clover="3.2.0">
+  <project timestamp="1608658420207" name="All files">
+    <metrics statements="219" coveredstatements="32" conditionals="55" coveredconditionals="5" methods="62" coveredmethods="6" elements="336" coveredelements="43" complexity="0" loc="219" ncloc="219" packages="12" files="13" classes="13"/>
     <package name="components.Button">
       <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
       <file name="index.tsx" path="/home/eduardo/projects/gostack/gobarber/web/src/components/Button/index.tsx">
@@ -15,18 +15,18 @@
       <file name="index.tsx" path="/home/eduardo/projects/gostack/gobarber/web/src/components/Input/index.tsx">
         <metrics statements="13" coveredstatements="10" conditionals="4" coveredconditionals="3" methods="4" coveredmethods="2"/>
         <line num="14" count="1" type="stmt"/>
-        <line num="15" count="2" type="stmt"/>
-        <line num="16" count="2" type="stmt"/>
-        <line num="17" count="2" type="stmt"/>
-        <line num="19" count="2" type="stmt"/>
-        <line num="21" count="2" type="stmt"/>
+        <line num="15" count="4" type="stmt"/>
+        <line num="16" count="4" type="stmt"/>
+        <line num="17" count="4" type="stmt"/>
+        <line num="19" count="4" type="stmt"/>
+        <line num="21" count="4" type="stmt"/>
         <line num="22" count="0" type="stmt"/>
-        <line num="25" count="2" type="stmt"/>
+        <line num="25" count="4" type="stmt"/>
         <line num="26" count="0" type="stmt"/>
         <line num="28" count="0" type="stmt"/>
-        <line num="31" count="2" type="stmt"/>
+        <line num="31" count="4" type="stmt"/>
         <line num="32" count="2" type="stmt"/>
-        <line num="39" count="2" type="stmt"/>
+        <line num="39" count="4" type="stmt"/>
       </file>
     </package>
     <package name="components.ToastContainer">
@@ -65,11 +65,11 @@
       </file>
     </package>
     <package name="hooks">
-      <metrics statements="42" coveredstatements="10" conditionals="8" coveredconditionals="2" methods="13" coveredmethods="2"/>
+      <metrics statements="42" coveredstatements="5" conditionals="8" coveredconditionals="1" methods="13" coveredmethods="1"/>
       <file name="auth.tsx" path="/home/eduardo/projects/gostack/gobarber/web/src/hooks/auth.tsx">
-        <metrics statements="28" coveredstatements="5" conditionals="6" coveredconditionals="1" methods="6" coveredmethods="1"/>
-        <line num="28" count="1" type="stmt"/>
-        <line num="30" count="1" type="stmt"/>
+        <metrics statements="28" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="6" coveredmethods="0"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
         <line num="31" count="0" type="stmt"/>
         <line num="32" count="0" type="stmt"/>
         <line num="33" count="0" type="stmt"/>
@@ -92,10 +92,10 @@
         <line num="67" count="0" type="stmt"/>
         <line num="69" count="0" type="stmt"/>
         <line num="75" count="0" type="stmt"/>
-        <line num="83" count="1" type="stmt"/>
-        <line num="85" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="83" count="0" type="stmt"/>
+        <line num="85" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="86" count="0" type="stmt"/>
-        <line num="89" count="1" type="stmt"/>
+        <line num="89" count="0" type="stmt"/>
       </file>
       <file name="toast.tsx" path="/home/eduardo/projects/gostack/gobarber/web/src/hooks/toast.tsx">
         <metrics statements="14" coveredstatements="5" conditionals="2" coveredconditionals="1" methods="7" coveredmethods="1"/>
@@ -251,19 +251,19 @@
       </file>
     </package>
     <package name="pages.SignIn">
-      <metrics statements="16" coveredstatements="6" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="1"/>
+      <metrics statements="16" coveredstatements="11" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <file name="index.tsx" path="/home/eduardo/projects/gostack/gobarber/web/src/pages/SignIn/index.tsx">
-        <metrics statements="16" coveredstatements="6" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <metrics statements="16" coveredstatements="11" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="24" count="1" type="stmt"/>
         <line num="25" count="1" type="stmt"/>
         <line num="27" count="1" type="stmt"/>
         <line num="28" count="1" type="stmt"/>
         <line num="30" count="1" type="stmt"/>
-        <line num="31" count="0" type="stmt"/>
-        <line num="32" count="0" type="stmt"/>
-        <line num="34" count="0" type="stmt"/>
-        <line num="39" count="0" type="stmt"/>
-        <line num="43" count="0" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="43" count="1" type="stmt"/>
         <line num="48" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="49" count="0" type="stmt"/>
         <line num="51" count="0" type="stmt"/>

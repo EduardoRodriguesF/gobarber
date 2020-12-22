@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">17.86% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>5/28</span>
+                <span class='fraction'>0/28</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">16.67% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>1/6</span>
+                <span class='fraction'>0/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">16.67% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/6</span>
+                <span class='fraction'>0/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">17.86% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>5/28</span>
+                <span class='fraction'>0/28</span>
             </div>
         
             
@@ -174,31 +174,16 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -207,6 +192,21 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -229,13 +229,13 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { createContext, useCallback, useState, useContext } from 'react';
 import api from '../services/api';
@@ -264,9 +264,9 @@ interface AuthContextData {
   updateUser(user: User): void;
 }
 &nbsp;
-const AuthContext = createContext&lt;AuthContextData&gt;({} as AuthContextData);
+const AuthContext = <span class="cstat-no" title="statement not covered" >createContext&lt;AuthContextData&gt;({} as AuthContextData);</span>
 &nbsp;
-export const AuthProvider: React.FC = <span class="fstat-no" title="function not covered" >({</span> children }) =&gt; {
+export const AuthProvider: React.FC = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >({</span> children }) =&gt; {</span>
   const [data, setData] = <span class="cstat-no" title="statement not covered" >useState&lt;AuthState&gt;(<span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
     const token = <span class="cstat-no" title="statement not covered" >localStorage.getItem('@GoBarber:token');</span>
     const user = <span class="cstat-no" title="statement not covered" >localStorage.getItem('@GoBarber:user');</span>
@@ -318,14 +318,14 @@ export const AuthProvider: React.FC = <span class="fstat-no" title="function not
   );
 };
 &nbsp;
-export function useAuth(): AuthContextData {
-  const context = useContext(AuthContext);
+export function <span class="fstat-no" title="function not covered" >useAuth(</span>): AuthContextData {
+  const context = <span class="cstat-no" title="statement not covered" >useContext(AuthContext);</span>
 &nbsp;
-  <span class="missing-if-branch" title="if path not taken" >I</span>if (!context) {
+<span class="cstat-no" title="statement not covered" >  if (!context) {</span>
 <span class="cstat-no" title="statement not covered" >    throw new Error('useAuth must be used within an AuthProvider');</span>
   }
 &nbsp;
-  return context;
+<span class="cstat-no" title="statement not covered" >  return context;</span>
 }
 &nbsp;</pre></td></tr></table></pre>
 
@@ -334,7 +334,7 @@ export function useAuth(): AuthContextData {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Tue Dec 22 2020 13:28:46 GMT-0300 (Brasilia Standard Time)
+                at Tue Dec 22 2020 14:33:40 GMT-0300 (Brasilia Standard Time)
             </div>
         </div>
         <script src="../prettify.js"></script>
