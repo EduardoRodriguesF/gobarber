@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">29.41% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>5/17</span>
+                <span class='fraction'>0/17</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>1/2</span>
+                <span class='fraction'>0/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">14.29% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/7</span>
+                <span class='fraction'>0/7</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">35.71% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>5/14</span>
+                <span class='fraction'>0/14</span>
             </div>
         
             
@@ -132,15 +132,15 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -163,13 +163,13 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -190,9 +190,9 @@ interface ToastContextData {
   removeToast(id: string): void;
 }
 &nbsp;
-const ToastContext = createContext&lt;ToastContextData&gt;({} as ToastContextData);
+const ToastContext = <span class="cstat-no" title="statement not covered" >createContext&lt;ToastContextData&gt;({} as ToastContextData);</span>
 &nbsp;
-const ToastProvider: React.FC = <span class="fstat-no" title="function not covered" >({</span> children }) =&gt; {
+const ToastProvider: React.FC = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >({</span> children }) =&gt; {</span>
   const [messages, setMessages] = <span class="cstat-no" title="statement not covered" >useState&lt;ToastMessage[]&gt;([]);</span>
 &nbsp;
   const addToast = <span class="cstat-no" title="statement not covered" >useCallback(<span class="fstat-no" title="function not covered" >({</span> type, title, description }: Omit&lt;ToastMessage, 'id'&gt;) =&gt; {</span>
@@ -220,14 +220,14 @@ const ToastProvider: React.FC = <span class="fstat-no" title="function not cover
   );
 };
 &nbsp;
-function useToast(): ToastContextData {
-  const context = useContext(ToastContext);
+function <span class="fstat-no" title="function not covered" >useToast(</span>): ToastContextData {
+  const context = <span class="cstat-no" title="statement not covered" >useContext(ToastContext);</span>
 &nbsp;
-  <span class="missing-if-branch" title="if path not taken" >I</span>if (!context) {
+<span class="cstat-no" title="statement not covered" >  if (!context) {</span>
 <span class="cstat-no" title="statement not covered" >    throw new Error('useToast must be used within a ToastProvider');</span>
   }
 &nbsp;
-  return context;
+<span class="cstat-no" title="statement not covered" >  return context;</span>
 }
 &nbsp;
 export { ToastProvider, useToast };
@@ -238,7 +238,7 @@ export { ToastProvider, useToast };
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Tue Dec 22 2020 14:33:40 GMT-0300 (Brasilia Standard Time)
+                at Tue Dec 22 2020 15:45:49 GMT-0300 (Brasilia Standard Time)
             </div>
         </div>
         <script src="../prettify.js"></script>

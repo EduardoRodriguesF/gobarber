@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">76.92% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>10/13</span>
+                <span class='fraction'>13/13</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">75% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>3/4</span>
+                <span class='fraction'>4/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>2/4</span>
+                <span class='fraction'>4/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">76.92% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>10/13</span>
+                <span class='fraction'>13/13</span>
             </div>
         
             
@@ -55,7 +55,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line medium'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -129,32 +129,32 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">10x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">18x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -185,7 +185,7 @@ import { Container, Error } from './styles';
 interface InputProps extends InputHTMLAttributes&lt;HTMLInputElement&gt; {
   name: string;
   containerStyle?: object;
-  icon: React.ComponentType&lt;IconBaseProps&gt;;
+  icon?: React.ComponentType&lt;IconBaseProps&gt;;
 }
 &nbsp;
 const Input: React.FC&lt;InputProps&gt; = ({ name, containerStyle, icon: Icon, ...rest }) =&gt; {
@@ -195,14 +195,14 @@ const Input: React.FC&lt;InputProps&gt; = ({ name, containerStyle, icon: Icon, .
 &nbsp;
   const { fieldName, defaultValue, error, registerField } = useField(name);
 &nbsp;
-  const handleInputFocus = useCallback(<span class="fstat-no" title="function not covered" >()</span> =&gt; {
-<span class="cstat-no" title="statement not covered" >    setIsFocused(true);</span>
+  const handleInputFocus = useCallback(() =&gt; {
+    setIsFocused(true);
   }, []);
 &nbsp;
-  const handleInputBlur = useCallback(<span class="fstat-no" title="function not covered" >()</span> =&gt; {
-<span class="cstat-no" title="statement not covered" >    setIsFocused(false);</span>
+  const handleInputBlur = useCallback(() =&gt; {
+    setIsFocused(false);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    setIsFilled(!!inputRef.current?.value);</span>
+    setIsFilled(!!inputRef.current?.value);
   }, []);
 &nbsp;
   useEffect(() =&gt; {
@@ -214,7 +214,7 @@ const Input: React.FC&lt;InputProps&gt; = ({ name, containerStyle, icon: Icon, .
   }, [fieldName, registerField]);
 &nbsp;
   return (
-    &lt;Container style={containerStyle} isErrored={!!error} isFilled={isFilled} isFocused={isFocused}&gt;
+    &lt;Container style={containerStyle} isErrored={!!error} isFilled={isFilled} isFocused={isFocused} data-testid="input-container"&gt;
       { Icon &amp;&amp; &lt;Icon size={20} /&gt;}
       &lt;input
         name={name}
@@ -225,7 +225,7 @@ const Input: React.FC&lt;InputProps&gt; = ({ name, containerStyle, icon: Icon, .
         {...rest}
       /&gt;
       {error &amp;&amp; (
-<span class="branch-1 cbranch-no" title="branch not covered" >        &lt;Error title={error}&gt;</span>
+        &lt;Error title={error}&gt;
           &lt;FiAlertCircle color="#c53030" size={20} /&gt;
         &lt;/Error&gt;
       )}
@@ -241,7 +241,7 @@ export default Input;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Tue Dec 22 2020 14:33:40 GMT-0300 (Brasilia Standard Time)
+                at Tue Dec 22 2020 15:45:49 GMT-0300 (Brasilia Standard Time)
             </div>
         </div>
         <script src="../../prettify.js"></script>
