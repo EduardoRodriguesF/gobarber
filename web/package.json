@@ -63,11 +63,13 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/react-hooks": "^3.7.0",
     "@types/date-fns": "^2.6.0",
     "@types/react-router-dom": "^5.1.6",
     "@types/yup": "^0.29.9",
     "@typescript-eslint/eslint-plugin": "^4.7.0",
     "@typescript-eslint/parser": "^4.7.0",
+    "axios-mock-adapter": "^1.19.0",
     "eslint": "^7.13.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-import-resolver-typescript": "^2.3.0",
@@ -76,6 +78,7 @@
     "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-react-hooks": "^4",
     "prettier": "^2.1.2",
+    "react-test-renderer": "^17.0.1",
     "typescript-eslint": "^0.0.1-alpha.0"
   }
 }
